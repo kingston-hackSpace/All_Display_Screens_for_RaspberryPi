@@ -1,6 +1,9 @@
-# GPIO - LCD TFT Display
+# GPIO - 3.5'' LCD TFT Display
 
-The following screens are available at hackSpace:
+----
+### Official Elegoo Manual
+
+For further details, download manual [here](https://github.com/kingston-hackSpace/Display__RaspberryPi/blob/main/35_tft.pdf)
 
 ----
 # 3.5'' LCD TFT Display
@@ -45,14 +48,17 @@ If you are running this screen *for the first time* in your RPi, you will need t
     cd LCD-show/
     sudo ./LCD35-show
     ```
-  - The Pi will reboot automatically. 
+  - The Pi will reboot automatically.
 
-----
-### Official Elegoo Manual
+  - Turn off the Pi and unplug the HDMI cable to the main monitor.
 
-For further details, download manual [here](https://github.com/kingston-hackSpace/Display__RaspberryPi/blob/main/35_tft.pdf)
+  - Replug the Pi and wait until you see the Desktop on the LCD screen.
 
-----
+
+NOTE: The *LCD35-show* script works by reconfiguring the Pi's framebuffer/display config (editing /boot/config.txt and swapping in an SPI-based display driver) so the LCD becomes the primary console output instead of HDMI. It doesn't mirror or extend across both — it redirects the whole display pipeline to the SPI screen.
+
+
+
 
 
 
